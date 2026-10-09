@@ -11,9 +11,9 @@ class Solution {
             if(left<right){
                 r--;
             }
-            else if(left==right){
-                r--;
-            }
+            // else if(left==right){
+            //     r--;
+            // }
             else{
                 l++;
             }
