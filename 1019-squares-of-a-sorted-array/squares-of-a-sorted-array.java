@@ -7,15 +7,17 @@ class Solution {
         while(ind!=-1){
             int left=nums[l]*nums[l];
             int right=nums[r]*nums[r];
-            int val=Math.max(left,right);
+            int val=0;
             if(left<right){
                 r--;
+                val=right;
             }
             // else if(left==right){
             //     r--;
             // }
             else{
                 l++;
+                val=left;
             }
             arr[ind--]=val;
         }
