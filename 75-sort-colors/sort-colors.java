@@ -6,15 +6,11 @@ class Solution {
         int h=n-1;
         while(m<=h){
             if(nums[m]==2){
-                int temp=nums[m];
-                nums[m]=nums[h];
-                nums[h]=temp;
+                swap(nums,m,h);
                 h--;
             }
             else if(nums[m]==0){
-                int temp=nums[m];
-                nums[m]=nums[l];
-                nums[l]=temp;
+                swap(nums,m,l);
                 l++;
                 m++;
             }
@@ -23,9 +19,9 @@ class Solution {
             }
         }    
     }
-    private void swap(int a,int b){
-        int temp=a;
-        a=b;
-        b=temp;
+    private void swap(int[] arr,int a,int b){
+        int temp=arr[a];
+        arr[a]=arr[b];
+        arr[b]=temp;
     }
 }
