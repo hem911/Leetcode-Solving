@@ -6,6 +6,9 @@ class Solution {
         }
         maxsum=lsum;
         int right=cardPoints.length-1;
+        if(right+1 ==k){
+            return lsum;
+        }
         for(int i=k-1;i>=0;i--){
             lsum=lsum-cardPoints[i];
             rsum=rsum+cardPoints[right];
