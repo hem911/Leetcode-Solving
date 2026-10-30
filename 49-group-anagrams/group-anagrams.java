@@ -6,23 +6,17 @@ class Solution {
             if(visited[i]){
                 continue;
             }
-            // list.add()
             List<String> strlist=new ArrayList<>();
-            for(int j=i;j<strs.length;j++){
-                
+            for(int j=i+1;j<strs.length;j++){
                 if(isanagram(strs[i],strs[j])){
                     visited[j]=true;
                     strlist.add(strs[j]);
                 }
-                
-
             }
-            // strlist.add(strs[i]);
+            strlist.add(strs[i]);
             list.add(strlist);
         }
-        return list;
-
-        
+        return list;   
     }
     public boolean isanagram(String s,String t){
         int freq[]=new int[26];
