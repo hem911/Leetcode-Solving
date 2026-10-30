@@ -1,6 +1,6 @@
 class Solution {
     public int firstUniqChar(String s) {
-        TreeMap<Character,Integer>map=new TreeMap<>();
+        HashMap<Character,Integer>map=new HashMap<>();
         for(int i=0;i<s.length();i++){
             map.put(s.charAt(i),map.getOrDefault(s.charAt(i),0)+1);
         }
